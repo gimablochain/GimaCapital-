@@ -1,0 +1,112 @@
+
+
+
+ @tailwind base;
+ @tailwind components;
+ @tailwind utilities;
+ 
+ /* General Styles */
+ body {
+   margin: 0;
+   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+   -webkit-font-smoothing: antialiased;
+   -moz-osx-font-smoothing: grayscale;
+ }
+ 
+ code {
+   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+ }
+ 
+ html, body, #root {
+   margin: 0;
+   padding: 0;
+   width: 100%;
+   height: 100%;
+   overflow-x: hidden;
+   overscroll-behavior-y: none;
+   box-sizing: border-box;
+ }
+ 
+ /* Landing Page Container */
+ .app-container {
+   @apply bg-gradient-to-br from-black via-gray-800 to-emerald-700 min-h-screen flex flex-col items-center text-emerald-500 px-4;
+   overflow-y: auto;
+   overscroll-behavior-y: contain;
+ }
+ 
+ /* Dashboard-specific container (scrollable + no bounce) */
+ .dashboard-container {
+   @apply min-h-screen flex bg-gray-100 dark:bg-slate-950;
+   overscroll-behavior-y: none;
+   -webkit-overflow-scrolling: auto;
+ 
+ }
+ 
+ /* Title Styles */
+ .main-title {
+   @apply text-2xl sm:text-4xl font-bold text-blue-400 mt-6 mb-4 text-center;
+ }
+ 
+ /* Navigation Links */
+ .nav-links {
+   @apply mb-4 flex flex-wrap justify-center space-x-2 sm:space-x-4 space-y-2 sm:space-y-0;
+ }
+ 
+ .button {
+   @apply px-3 py-2 sm:px-4 sm:py-2 rounded-md bg-gradient-to-r from-blue-500 to-cyan-500 text-white uppercase text-xs sm:text-sm font-bold shadow-md hover:from-blue-600 hover:to-cyan-600 transform hover:scale-105 transition-transform duration-200 ease-in-out;
+ }
+ 
+ /* Balance Section */
+ .balance-section {
+   @apply mt-6 text-center;
+ }
+ 
+ .balance-text {
+   @apply text-base sm:text-lg font-medium;
+ }
+ 
+ .balance-controls {
+   @apply flex flex-col sm:flex-row sm:space-x-4 space-y-4 sm:space-y-0 mt-4 justify-center;
+ }
+ 
+ .value-block {
+   background-color: #059669;
+   color: white;
+   padding: 16px;
+   border-radius: 8px;
+   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+   transition: transform 0.2s;
+ }
+ 
+ .value-block:hover {
+   transform: scale(1.05);
+ }
+ 
+ /* Theme Variables */
+ :root {
+   --color-bg-primary: #ffffff;
+   --color-bg-secondary: #f3f4f6;
+   --color-bg-accent: #e5e7eb;
+   --color-text-primary: #111827;
+   --color-text-secondary: #4b5563;
+   --color-text-accent: #059669;
+   --color-border-primary: #d1d5db;
+   --color-border-accent: #059669;
+   --color-buy-accent: #059669;
+   --color-sell-accent: #dc2626;
+ }
+ 
+ .dark {
+   --color-bg-primary: #0f172a;
+   --color-bg-secondary: #1e293b;
+   --color-bg-accent: #334155;
+   --color-text-primary: #f8fafc;
+   --color-text-secondary: #94a3b8;
+   --color-text-accent: #10b981;
+   --color-border-primary: #334155;
+   --color-border-accent: #10b981;
+   --color-buy-accent: #10b981;
+   --color-sell-accent: #ef4444;
+ }
+ 
